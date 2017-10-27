@@ -28,7 +28,7 @@ module.exports = function(context, request) {
           context.log(err);
         } else {
           context.log("Successful call to Cognitive Services");
-          context.log("Response Body: " + response.body);
+          context.log("Response Body: " + JSON.stringify(response.body));
           context.log("Tags: " + response.body.description.tags);
         }
         context.done();

@@ -14,12 +14,15 @@ module.exports = function(context, inputBlob) {
       "Content-Type" : "application/octet-stream"
   };
 
+  console.log("Shipping blob to Cognitive Services:");
   NEEDLE.post('https://southcentralus.api.cognitive.microsoft.com/vision/v1.0/describe?maxCandidates=1',
     inputBlob, options, function(err, response) {
         if (err) {
+          console.log("Error calling Cognitive Services:");
           console.log(err);
         } else {
-          console.log(response.Result);
+          console.log("Successful call to Cognitive Services");
+          console.log(response);
         }
         context.done();
     });

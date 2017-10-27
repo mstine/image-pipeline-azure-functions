@@ -17,7 +17,7 @@ module.exports = function(context, request) {
   };
 
   var data = {
-      buffer: request.body
+      buffer: request.body.content
   }
 
   context.log("Shipping blob to Cognitive Services:");

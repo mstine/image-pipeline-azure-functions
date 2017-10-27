@@ -1,0 +1,9 @@
+{
+	"name": "resize-image",
+	"description": "I resize images..",
+	"author": "Stine",
+	"version": "1.0.0",
+	"dependencies": {
+		"jimp" : "latest"	
+	}
+}

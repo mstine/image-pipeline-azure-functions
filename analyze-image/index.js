@@ -21,6 +21,7 @@ module.exports = function(context, inputBlob) {
         } else {
           console.log(response.Result);
         }
+        context.done();
     });
 
 

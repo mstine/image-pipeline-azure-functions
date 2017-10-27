@@ -13,7 +13,7 @@ module.exports = function(context, inputBlob) {
     }
   };
 
-  NEEDLE.post('https://southcentralus.api.cognitive.microsoft.com/vision/v1.0/describe',
+  NEEDLE.('post','https://southcentralus.api.cognitive.microsoft.com/vision/v1.0/describe',
     data, options)
     .then(response => {
         console.log(response.Result);

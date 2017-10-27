@@ -10,8 +10,11 @@ application/octet-stream < ~/Downloads/DevOps-Pivotal-Office-SF-01\ \(1\).jpg
 module.exports = function(context, inputBlob) {
 
   var options = {
-      "Ocp-Apim-Subscription-Key" : "8b03b56769db430c832bcbd33f07c062",
-      "Content-Type" : "application/octet-stream"
+    headers: {
+        'Ocp-Apim-Subscription-Key' : '8b03b56769db430c832bcbd33f07c062'
+    },
+    content_type : "application/octet-stream",
+    multipart : true
   };
 
   context.log("Shipping blob to Cognitive Services:");

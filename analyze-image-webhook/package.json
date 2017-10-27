@@ -1,0 +1,9 @@
+{
+	"name": "analyze-image-webhook",
+	"description": "I analyze images..",
+	"author": "Stine",
+	"version": "1.0.0",
+	"dependencies": {
+		"needle" : "2.0.1"
+	}
+}

@@ -13,13 +13,18 @@ module.exports = function(context, inputBlob) {
     headers: {
         'Ocp-Apim-Subscription-Key' : '8b03b56769db430c832bcbd33f07c062'
     },
-    content_type : "application/octet-stream",
     multipart : true
   };
 
+  var data = {
+    file: {
+      buffer: inputBlob
+    }
+  }
+
   context.log("Shipping blob to Cognitive Services:");
   NEEDLE.post('https://southcentralus.api.cognitive.microsoft.com/vision/v1.0/describe?maxCandidates=1',
-    inputBlob, options, function(err, response) {
+    data, options, function(err, response) {
         if (err) {
           context.log("Error calling Cognitive Services:");
           context.log(err);

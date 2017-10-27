@@ -17,9 +17,7 @@ module.exports = function(context, inputBlob) {
   };
 
   var data = {
-    file: {
       buffer: inputBlob
-    }
   }
 
   context.log("Shipping blob to Cognitive Services:");
@@ -30,7 +28,7 @@ module.exports = function(context, inputBlob) {
           context.log(err);
         } else {
           context.log("Successful call to Cognitive Services");
-          context.log(response);
+          context.log(response.body.description.tags);
         }
         context.done();
     });
